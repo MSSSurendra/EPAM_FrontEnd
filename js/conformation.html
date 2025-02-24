@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Example</title>
+    <style>
+        body {
+            background-color: #f0f4f8;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #confirmButton {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #confirmButton:hover {
+            background-color: #0056b3;
+        }
+
+        #confirmButton:active {
+            background-color: #004494;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Confirmation Example</h1>
+        <p>Click the button below to see a confirmation dialog.</p>
+        <button id="confirmButton">Click Me</button>
+    </div>
+
+    <script>
+        // Get the button element
+        const button = document.getElementById('confirmButton');
+
+        // Add an event listener to the button
+        button.addEventListener('click', function() {
+            // Show the confirmation dialog
+            const userConfirmed = confirm("Are you sure you want to proceed?");
+
+            // Check the user's response
+            if (userConfirmed) {
+                alert("You confirmed!");
+            } else {
+                alert("You canceled.");
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 1</title>
+</head>
+<body>
+    <h1>Simple Interest Calculation</h1>
+    <script>
+        let Principal = prompt("Enter the Initial Amount:");
+        let tenure = prompt("Enter the Number of Years:");
+        let rateofInterest = prompt("Enter the Rate of Interest (Percentage per Year):");
+
+        Principal = parseFloat(Principal);
+        tenure = parseInt(tenure);
+        rateofInterest = parseFloat(rateofInterest);
+
+        if(isNaN(Principal)||  isNaN(tenure) || isNaN(rateofInterest)) {
+            alert("Please enter valid inputs...");
+        } else {
+            let totalProfit = 0;
+            let totalAmount = Principal;
+
+            document.write("Initial Amount:"+Principal+"<br/>");
+            document.write("Number of years:"+tenure+"<br/>");
+            document.write("Percentage of Year:"+rateofInterest+"<br/>");
+
+            for(let i = 1; i <= tenure; i++) {
+                let yearlyProfit = (totalAmount * rateofInterest) / 100;
+                totalProfit += yearlyProfit;
+                totalAmount += yearlyProfit;
+                document.write("<br/>")
+                document.write(i + " Year<br/>");
+                document.write("Total profit: " + totalProfit.toFixed(2) + " (" + rateofInterest + "% from previous total amount)<br/>");
+                document.write("Total amount: " + totalAmount.toFixed(2) + " (initial amount + total profit)<br/><br/>");
+            }
+        }
+    </script>
+</body>
+</html>
