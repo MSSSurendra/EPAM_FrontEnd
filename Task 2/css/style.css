@@ -1,0 +1,112 @@
+/* 
+
+write your code here
+
+*/
+.tm-sidebar{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.tm-sidebar nav ul li:hover{
+    background-color: lightgray;
+}
+div > section{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.tm-content-header{
+    margin-bottom: 10vh;
+    border: 1px solid grey;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);   
+}
+.tm-section-title + p{
+    font-style: italic;
+}
+.tm-content-box{
+    justify-content: space-between;
+    align-items: center;
+}
+
+section .tm-content-box{
+    display: flex;
+}
+section div p {
+    line-height: 40px;
+}
+.tm-team-description-container p::first-letter{
+    color: #87CEFA;
+    font-size: 30px;
+}
+.tm-team-description-container .flex-item{
+    padding: medium;
+    flex: 1;
+}
+.tm-content-box + .flex-item{
+    height: 50vh;
+    width: 50vw;
+}
+
+ul .box-bg h2:hover{
+    color: white;
+    background-color: #87CEFA;
+}
+
+.carousel-inner .flex-item > h2{
+    color: gainsboro;
+    letter-spacing: 5px;
+}
+
+section ol li a{
+    text-decoration: none;
+}
+section ol li a:visited{
+    text-decoration: underline #87CEFA;
+}
+
+section ol li:hover{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text::after{
+    content: "New";
+    color: red;
+    vertical-align: super;
+}
+
+.blocks div .gallery-container li div p{
+    font-style: italic;
+}
+.blocks div .gallery-container li div p::first-letter{
+    font-size: 30px;
+    color: grey;
+}
+.blocks div .gallery-container li:hover{
+    background-color: lightgray;
+}
+
+.required {
+    position: absolute;
+    margin-left: -10px;
+    color: #FB0000;
+    font-size: 15px;
+}
+.asterisc {
+    display: block;
+    color: red;
+    margin: -35px 495px;
+  }
+.submit-btn{
+    float: right;
+    border-radius: 0px;
+    border: 1px solid #87CEFA;
+    color: #87CEFA;
+    background-color: white;
+}
+.submit-btn:hover{
+    border: none;
+    color: white;
+    background-color: #87CEFA;
+}
+
+#about{
+    justify-content: center;
+}
