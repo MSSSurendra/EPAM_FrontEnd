@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 1</title>
+</head>
+<body>
+    <h1>Profits & Total Sum</h1>
+    <script>
+        let n=0;
+        let amt = prompt("Enter the initial amount:");
+        n = prompt("Enter the no. of years:");
+        let percentage = prompt("Enter the percentage:");
+        let i=0;
+        // Convert the input values from strings to numbers
+        amt = parseFloat(amt);
+        n = parseFloat(n);
+        percentage = parseFloat(percentage);
+        let t = n;
+        // Check if inputs are valid numbers
+        if ((isNaN(amt) || isNaN(n) || isNaN(percentage))) {
+            document.write("<p>Invalid input data!</p>");
+        }
+        else if(amt>=1000 && n>=1 && percentage<=100){
+			let tamt = amt;
+            let tp = 0;
+        
+        for(let i=1;i<=n;i++){
+            let yp = tamt*(percentage/100);
+            tp+= yp;
+            tamt+=yp;
+            document.write("<p>"+i+" Year<br/>Total Profit: "+tp+"<br/>Total amount: "+tamt+"</p>");
+        }
+        
+        }
+    </script>
+</body>
+</html>
